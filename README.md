@@ -28,3 +28,6 @@ Composer version 2.0.8
 ### Создайте папку для сайта
 ```
 # mkdir /var/www/symfony
+
+### Конфигурация nginx
+Для настройки nginx используйте ```nginx-symfony```
