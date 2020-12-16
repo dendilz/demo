@@ -12,7 +12,6 @@ node('slave') {
             sh "mkdir $APP_PATH/site-$GIT_COMMIT_NAME"
             sh "cp -r . $APP_PATH/site-$GIT_COMMIT_NAME"
             sh "ln -fsn $APP_PATH/site-$GIT_COMMIT_NAME $APP_PATH/site"
-            sh "chmod -R 777 $APP_PATH/site-$GIT_COMMIT_NAME"
         }
         stage ('Remove old builds'){
             sh "cd $APP_PATH/ && ls -tp | tail -n +5 | xargs rm -rf"
